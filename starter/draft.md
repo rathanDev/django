@@ -22,6 +22,8 @@ python manage.py startapp pages
 URL Routing and Requests
 @1.04.00
 
+Django Templates
+@1.10.00 
 
 
 
