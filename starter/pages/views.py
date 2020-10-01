@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def home_view(*args, **kwargs):
-    return HttpResponse("<h1>Hellow Django!</h1>") 
+    return HttpResponse("<h1>Hellow Django!!</h1>") 

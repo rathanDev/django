@@ -19,5 +19,9 @@ Default Homepage to custom homepage
 
 python manage.py startapp pages
 
+URL Routing and Requests
+@1.04.00
+
+
 
 
