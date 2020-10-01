@@ -14,3 +14,10 @@ python manage.py shell
 > Product.objects.create(title='Newer title', price=22.33, summary='Awesome')
 
 
+Default Homepage to custom homepage
+@59.00
+
+python manage.py startapp pages
+
+
+
