@@ -33,5 +33,8 @@ URL Routing and Requests
 Django Templates
 @1.10.00 
 
+Include Template Tag
+@1.24.00
+
 
 
