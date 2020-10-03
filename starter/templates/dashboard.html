@@ -16,9 +16,19 @@ My list: {{ my_list }}
 
 <ul>
     {% for item in my_list %}
+    
         <li>
             {{ forloop.counter }} - {{ item }}
         </li>
+
+        {% if item == 123 %}
+            item == 123
+        {% elif item != 123 %}
+            item != 123
+        {% else %}
+            else never true
+        {% endif %}
+
     {% endfor %}
 </ul>
 

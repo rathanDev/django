@@ -42,3 +42,8 @@ Rendering Context in a Template
 For Loop in a Template
 @1.33.00
 
+Using conditions in a template
+@1.37.00
+
+
+
