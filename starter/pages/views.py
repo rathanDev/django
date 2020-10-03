@@ -13,3 +13,12 @@ def about_view(request, *args, **kwargs):
 
 def contact_view(*args, **kwargs):
     return HttpResponse("<h2>Contact Page</h2>")
+
+
+def dashboard_view(request, *args, **kwargs):
+    my_context = {
+        "my_text": "my_text",
+        "my_number": 123,
+        "my_list": [1,2,3,4]
+    }
+    return render(request, "dashboard.html", my_context)

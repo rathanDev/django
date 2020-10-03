@@ -36,5 +36,9 @@ Django Templates
 Include Template Tag
 @1.24.00
 
+Rendering Context in a Template
+@1.26.00
 
+For Loop in a Template
+@1.33.00
 

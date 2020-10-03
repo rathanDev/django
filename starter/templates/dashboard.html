@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+abcd
+<!-- {{my_text}} -->
+
+{% block content %}
+
+<h1>This is dashboard</h1>
+{{request.user}} <br>
+{{request.user.is_authenticated}}
+
+<p></p>
+My Text: {{ my_text }} <br>
+My number: {{ my_number }} <br>
+My list: {{ my_list }}
+
+<ul>
+    {% for item in my_list %}
+        <li>
+            {{ forloop.counter }} - {{ item }}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
