@@ -8,5 +8,8 @@ def home_view(request, *args, **kwargs):
     print(request.user)
     return render(request, "home.html", {}) 
 
+def about_view(request, *args, **kwargs):
+    return render(request, "about.html", {})
+
 def contact_view(*args, **kwargs):
     return HttpResponse("<h2>Contact Page</h2>")
