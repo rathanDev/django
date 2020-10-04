@@ -45,5 +45,11 @@ For Loop in a Template
 Using conditions in a template
 @1.37.00
 
+Template Tags and Filters
+@1.42.00
+
+Render data from the database with a model
+@1.49.00
+
 
 
