@@ -1,0 +1,69 @@
+Python
+------
+python --version
+pip --version
+python -m pip install --upgrade pip
+pip -v
+pip install virtualenv
+
+
+Virtual Environment
+-------------------
+virtualenv venv
+venv\Scripts\activate                       # source venv/Scripts/activate
+deactivate 
+	Ø ends the virtual environment
+
+
+
+Django Install
+--------------
+pip install django==3.1.2
+django-admin --version
+python -m pip install --upgrade pip
+django-admin startproject starter			# create a project
+python manage.py startapp web				# create a module  inside a project
+
+
+
+Django Run
+----------
+
+jana@vivo MINGW64 /c/VProjects/django/starter (master)
+$ django-admin
+
+jana@vivo MINGW64 /c/VProjects/django/starter (master)
+$ django-admin --version
+3.1.1
+(venv)
+
+jana@vivo MINGW64 /c/VProjects/django/starter (master)
+$ django-admin --version
+
+jana@vivo MINGW64 /c/VProjects/django/starter (master)
+$ pip install django
+
+
+
+$ python manage.py version
+3.1.1
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+> winpty python manage.py createsuperuser
+
+python manage.py shell
+> from customers.models import Customer
+> Customer.objects.create(customer_id=1, customer_name='SCFM Compression Systems'); Customer.objects.create(customer_id=2, customer_name='Wynnewood Refining Co LLC'); Customer.objects.create(customer_id=3, customer_name='OneOK Inc'); Customer.objects.create(customer_id=4, customer_name='Jetta Inc'); Customer.objects.create(customer_id=5, customer_name='Lion Oil');
+> from customers.models import Device
+> Device.objects.create(device_id=10, device_name='Compressor 10', device_type='compressor'); Device.objects.create(device_id=11, device_name='Compressor 11', device_type='compressor'); Device.objects.create(device_id=12, device_name='Compressor 12', device_type='compressor'); Device.objects.create(device_id=13, device_name='Compressor 13', device_type='compressor');
+> exit()
+
+python .\manage.py makemigrations
+
+python .\manage.py runserver 
+python .\manage.py runserver 8080
+python .\manage.py runserver 0.0.0.0:8000

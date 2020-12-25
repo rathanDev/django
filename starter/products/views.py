@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .forms import ProductForm
+
 from .models import Product
 
 # Create your views here.
@@ -14,3 +16,4 @@ def product_detail_view(request):
         'obj': obj
     }
     return render(request, "product/detail.html", context)
+
