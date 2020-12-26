@@ -18,9 +18,9 @@ deactivate
 
 Django Install
 --------------
+python -m pip install --upgrade pip
 pip install django==3.1.2
 django-admin --version
-python -m pip install --upgrade pip
 django-admin startproject starter			# create a project
 python manage.py startapp web				# create a module  inside a project
 
