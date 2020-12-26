@@ -1,0 +1,32 @@
+
+pip install django
+python -m pip install --upgrade pip
+
+
+django-admin startproject starter			# create a project
+python manage.py startapp web				# create a module  inside a project
+
+virtualenv venv
+venv\Scripts\activate                       # source venv/Scripts/activate
+deactivate                              	# ends the virtual environment
+
+python .\manage.py runserver
+
+python .\manage.py makemigrations
+python .\manage.py migrate
+
+python manage.py createsuperuser
+
+
+
+--------------------------------------------------------------------------
+
+create users module 
+create users model  in models.py
+register user model in admin.py 
+
+--------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
