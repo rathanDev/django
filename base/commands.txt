@@ -22,6 +22,8 @@ python manage.py createsuperuser
 --------------------------------------------------------------------------
 
 create users module 
+Add to settings.py
+
 create users model  in models.py
 register user model in admin.py 
 
