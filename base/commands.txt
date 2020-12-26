@@ -3,8 +3,8 @@ pip install django
 python -m pip install --upgrade pip
 
 
-django-admin startproject starter			# create a project
-python manage.py startapp web				# create a module  inside a project
+django-admin startproject base			    # create a project
+python manage.py startapp customer				# create a module  inside a project
 
 virtualenv venv
 venv\Scripts\activate                       # source venv/Scripts/activate
@@ -28,6 +28,11 @@ create users model  in models.py
 register user model in admin.py 
 
 --------------------------------------------------------------------------
+
+https://www.django-rest-framework.org/tutorial/quickstart/
+
+pip install djangorestframework
+
 
 
 --------------------------------------------------------------------------
