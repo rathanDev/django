@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 
 from .models import Customer
@@ -15,7 +16,8 @@ from .serializers import UserSerializer, GroupSerializer
 
 
 @csrf_exempt
-def get_all_customers(request, *args, **kwargs):
+@login_required
+def get_all_customers(request, *args, **kwargs):                        # http://127.0.0.1:8000/customer/all/
     print('------------------------------------get_all_customers')
     customers = Customer.objects.all()
     json = []
