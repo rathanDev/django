@@ -10,6 +10,12 @@ from .serializers import UserSerializer, GroupSerializer
 
 from .models import Customer
 
+# -----
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
 
 
 def get_all_customers(request, *args, **kwargs):                        # http://127.0.0.1:8000/customer/all/
@@ -40,5 +46,18 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 
 
+
+
+class HelloView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        content = {'message': 'Hello, there!'}
+        return Response(content)
+
+
+# curl -X POST -d "username=jana&password=jana@123" http://localhost:8000/api-token-auth/
+
+# curl -H "Authorization: JWT "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImphbmEiLCJleHAiOjE2MTE2MzI0MDYsImVtYWlsIjoicmF0aGFuLmtwYXJhbUBnbWFpbC5jb20ifQ.oYET2CDPZIGq0AzdHbvdYhQf9y4XVXCQy6j0mqrjYTM" http://localhost:8000/customers/hello
 
 

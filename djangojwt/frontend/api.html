@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            console.log('Document ready');
+
+            $("button").click(function () {
+
+                console.log('Clicked!');
+
+                $.ajax({
+                    url: 'http://127.0.0.1:8000/customers/hello/',
+                    type: 'GET',
+                    // // 'Access-Control-Allow-Credentials': 'true',
+                    // 'Access-Control-Allow-Origin': 'true',
+                    // data: {
+                    //     username: 'api_jana'
+                    // },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'Authorization': 'Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImphbmEiLCJleHAiOjE2MDkwMzcwODcsImVtYWlsIjoicmF0aGFuLmtwYXJhbUBnbWFpbC5jb20ifQ.ul9pUDwUcB6uJOycDBQNzcoM8cUEgLSFJL5a0ZK0Jwc'
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        console.info(data);
+                    }
+                });
+
+
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <button>Click</button>
+
+</body>
+
+</html>
