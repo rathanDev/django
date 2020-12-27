@@ -66,18 +66,12 @@ class Login extends Component {
         const url = "http://127.0.0.1:8000/customers/hello/";
 
         const requestOptions = {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImphbmEiLCJleHAiOjE2MTE2NjAwNzAsImVtYWlsIjoicmF0aGFuLmtwYXJhbUBnbWFpbC5jb20ifQ.2Wq5JzTQ_4ZQX_NzvWlnUfhGb735xqKsrqf86NCHerw',
-            },
-            body: JSON.stringify(
-                {
-                    username: 'jana',
-                    password: 'jana@123'
-                }
-            )
+                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImphbmEiLCJleHAiOjE2MTE2NjAwNzAsImVtYWlsIjoicmF0aGFuLmtwYXJhbUBnbWFpbC5jb20ifQ.2Wq5JzTQ_4ZQX_NzvWlnUfhGb735xqKsrqf86NCHerw',
+            }
         };
 
         fetch(url, requestOptions)
