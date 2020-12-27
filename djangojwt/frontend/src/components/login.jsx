@@ -45,7 +45,7 @@ class Login extends Component {
     }
 
     getCustomers() {
-        console.log('get users');
+        console.log('get customers');
 
         const url = "http://127.0.0.1:8000/customers/all/";
 

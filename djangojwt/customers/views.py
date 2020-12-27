@@ -18,7 +18,7 @@ from rest_framework.permissions import IsAuthenticated
 
 
 
-def get_all_customers(request, *args, **kwargs):                        # http://127.0.0.1:8000/customer/all/
+def get_all_customers(request, *args, **kwargs):                        # http://127.0.0.1:8000/customers/all/
     print('------------------------------------get_all_customers')
     customers = Customer.objects.all()
     json = []

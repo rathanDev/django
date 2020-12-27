@@ -45,5 +45,18 @@ pip install djangorestframework-jwt
 https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html
 
 --------------------------------------------------------------------------
+
+CORS 
+
+python -m pip install django-cors-headers
+
+INSTALLED_APPS = [
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+]
+
 --------------------------------------------------------------------------
 

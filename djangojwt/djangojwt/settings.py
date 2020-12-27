@@ -15,8 +15,6 @@ from pathlib import Path
 from datetime import timedelta
 
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,7 +28,10 @@ SECRET_KEY = '0m%-5tygl^^c$&dm1)35zjhtbn6!rvf@f12(ut9rqj_=p+ynds'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost'
+]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -53,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
+
     # 3rd party
     'rest_framework',
     'rest_framework.authtoken',
@@ -69,6 +72,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'djangojwt.urls'
@@ -159,32 +164,31 @@ REST_FRAMEWORK = {
 WSGI_APPLICATION = 'djangojwt.wsgi.application'
 
 
-
 JWT_AUTH = {
-  'JWT_ENCODE_HANDLER':
-  'rest_framework_jwt.utils.jwt_encode_handler',
-  'JWT_DECODE_HANDLER':
-  'rest_framework_jwt.utils.jwt_decode_handler',
-  'JWT_PAYLOAD_HANDLER':
-  'rest_framework_jwt.utils.jwt_payload_handler',
-  'JWT_PAYLOAD_GET_USER_ID_HANDLER':
-  'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
-  'JWT_RESPONSE_PAYLOAD_HANDLER':
-  'rest_framework_jwt.utils.jwt_response_payload_handler',
- 
-  'JWT_SECRET_KEY': 'SECRET_KEY',
-  'JWT_GET_USER_SECRET_KEY': None,
-  'JWT_PUBLIC_KEY': None,
-  'JWT_PRIVATE_KEY': None,
-  'JWT_ALGORITHM': 'HS256',
-  'JWT_VERIFY': True,
-  'JWT_VERIFY_EXPIRATION': True,
-  'JWT_LEEWAY': 0,
-  'JWT_EXPIRATION_DELTA': timedelta(days=30),
-  'JWT_AUDIENCE': None,
-  'JWT_ISSUER': None,
-  'JWT_ALLOW_REFRESH': False,
-  'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=30),
-  'JWT_AUTH_HEADER_PREFIX': 'Bearer',
-  'JWT_AUTH_COOKIE': None,
+    'JWT_ENCODE_HANDLER':
+    'rest_framework_jwt.utils.jwt_encode_handler',
+    'JWT_DECODE_HANDLER':
+    'rest_framework_jwt.utils.jwt_decode_handler',
+    'JWT_PAYLOAD_HANDLER':
+    'rest_framework_jwt.utils.jwt_payload_handler',
+    'JWT_PAYLOAD_GET_USER_ID_HANDLER':
+    'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+    'rest_framework_jwt.utils.jwt_response_payload_handler',
+
+    'JWT_SECRET_KEY': 'SECRET_KEY',
+    'JWT_GET_USER_SECRET_KEY': None,
+    'JWT_PUBLIC_KEY': None,
+    'JWT_PRIVATE_KEY': None,
+    'JWT_ALGORITHM': 'HS256',
+    'JWT_VERIFY': True,
+    'JWT_VERIFY_EXPIRATION': True,
+    'JWT_LEEWAY': 0,
+    'JWT_EXPIRATION_DELTA': timedelta(days=30),
+    'JWT_AUDIENCE': None,
+    'JWT_ISSUER': None,
+    'JWT_ALLOW_REFRESH': False,
+    'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=30),
+    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
+    'JWT_AUTH_COOKIE': None,
 }
