@@ -8,7 +8,8 @@ class Login extends Component {
             <div>
                 Username: <input type="text" /> <br />
                 Password: <input type="text" /> <br />
-                <input type="submit" value="Login" onClick={this.login} />
+                <input type="submit" value="Login" onClick={this.login} /> <br/>
+                <input type="button" value="GetCustomers" onClick={this.getCustomers} />
             </div>
         )
     }
@@ -41,6 +42,20 @@ class Login extends Component {
             })
             .catch(console.error);
 
+    }
+
+    getCustomers() {
+        console.log('get users');
+
+        const url = "http://127.0.0.1:8000/customers/all/";
+
+        fetch(url)
+            .then(res => res.json())
+            .then((data) => {
+                console.log('data', data);
+                
+            })
+            .catch(console.error);
     }
 
 }
