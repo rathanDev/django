@@ -11,6 +11,8 @@ venv\Scripts\activate                       # source venv/Scripts/activate
 deactivate                              	# ends the virtual environment
 
 python .\manage.py runserver
+python .\manage.py runserver <PORT>
+
 
 python .\manage.py makemigrations
 python .\manage.py migrate
@@ -34,6 +36,29 @@ https://www.django-rest-framework.org/tutorial/quickstart/
 pip install djangorestframework
 
 
+
+--------------------------------------------------------------------------
+
+https://jpadilla.github.io/django-rest-framework-jwt/
+
+pip install djangorestframework-jwt
+
+
+https://simpleisbetterthancomplex.com/tutorial/2018/12/19/how-to-use-jwt-authentication-with-django-rest-framework.html
+
+--------------------------------------------------------------------------
+
+CORS 
+
+python -m pip install django-cors-headers
+
+INSTALLED_APPS = [
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+]
 
 --------------------------------------------------------------------------
 
