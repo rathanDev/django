@@ -11,6 +11,8 @@ venv\Scripts\activate                       # source venv/Scripts/activate
 deactivate                              	# ends the virtual environment
 
 python .\manage.py runserver
+python .\manage.py runserver <PORT>
+
 
 python .\manage.py makemigrations
 python .\manage.py migrate
