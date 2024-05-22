@@ -109,6 +109,30 @@ npx create-react-app ui
 cd ui
 npm i axios
 
+# -----
+
+Next.js
+
+Routing and navigation 
+    <Link />
+Metadata 
+Styling (tailwind css)
+<Image />
+Client vs Server components 
+    - Data fetching (GET-requests)
+Server actions (POST/PUT/DELETE)
+Suspense and streaming 
+Caching 
+static and dynamic rendering 
+Middleware 
+Folder structure 
+Production build and deploying 
+
+npx create-next-app next-ui
+
+# -----
+
+
 
 # ----- ----- ----- ----- # ----- ----- ----- ----- # ----- ----- ----- ----- # 
 
