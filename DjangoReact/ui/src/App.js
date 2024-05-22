@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import './App.css'
 
 class App extends React.Component {
 
@@ -22,15 +23,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header>Data generated from Django</header>
-        <hr></hr>
-        {this.state.details.map((e, id) => (
-          <div key={id}>
-            <p>{e.employee}</p>
-            <p>{e.department}</p>
-            <br/>
-          </div>
-        ) )}
+        <body>
+          <header>Data generated from Django</header>
+          <hr></hr>
+          {this.state.details.map((e, id) => (
+            <div key={id}>
+              <p>{e.employee}</p>
+              <p>{e.department}</p>
+              <br/>
+            </div>
+          ) )}
+        </body>
       </div>
     )
   }
