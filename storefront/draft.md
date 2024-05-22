@@ -40,3 +40,44 @@ Ctrl+Shift+P
 python manage.py startapp playground 
 
 
+Debugging 
+Run and Debug 
+Choose Python -> Choose Django 
+start app in the debug mode 
+
+
+Modelling 
+
+    Product 
+
+    Cart 
+        created_at 
+
+    CartItem
+
+    Customer 
+        name 
+        email 
+
+    Order 
+        placed_at 
+
+    OrderItem 
+        quantity
+
+    Tag 
+        label 
+
+
+apps 
+    store 
+        products
+        carts 
+        customers
+        orders 
+
+    tags 
+
+python manage.py startapp store 
+python manage.py startapp tags 
+

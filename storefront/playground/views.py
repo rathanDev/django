@@ -11,4 +11,6 @@ from django.http import HttpResponse
 
 def say_hello(request):
     # return HttpResponse('Hello World')
-    return render(request, 'hello.html', {'name': 'Jana'})
+    x = 1
+    y = 1
+    return render(request, 'hello.html', {'name': 'Rathan'})
