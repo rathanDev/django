@@ -26,3 +26,7 @@ pipenv install django       # Create virtual env
 pipenv shell                # activate 
 django-admin startproject storefront .
 python manage.py runserver
+
+# Activate python virtual env interpretor 
+pipenv --venv   
+    C:\Users\ratha\.virtualenvs\storefront-lL_5YkoB
