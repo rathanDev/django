@@ -103,5 +103,12 @@ pwd:        ratha
 
 python manage.py runserver 
 
+# -----
+
+npx create-react-app ui
+cd ui
+npm i axios
+
+
 # ----- ----- ----- ----- # ----- ----- ----- ----- # ----- ----- ----- ----- # 
 
