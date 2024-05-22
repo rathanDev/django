@@ -90,9 +90,18 @@ pipenv install django
 pipenv install djangorestframework
 pipenv shell                # activate 
 pipenv install django-cors-headers
+
 django-admin startproject project .
 python manage.py startapp app
 
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser 
+username:   ratha
+pwd:        ratha
+
+python manage.py runserver 
 
 # ----- ----- ----- ----- # ----- ----- ----- ----- # ----- ----- ----- ----- # 
 
