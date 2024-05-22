@@ -39,3 +39,4 @@ Ctrl+Shift+P
 
 python manage.py startapp playground 
 
+
